@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width ="fill_parent"
+    android:layout_height = "wrap_content"
+
+    android:layout_marginTop = "@dimen/feed_item_margin"
+    android:background="@color/colorAccent2"
+    android:layout_margin="5dp"
+    android:orientation = "vertical"
+    android:id="@+id/layout_main_container"
+    android:paddingBottom = "@dimen/feed_item_padding_top_bottom"
+    android:paddingTop = "@dimen/feed_item_padding_top_bottom" >
+
+    <!--<include layout="@layout/item_divider" />-->
+
+    <RelativeLayout
+        android:id="@+id/layout_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <RelativeLayout
+            android:id="@+id/mpicContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+
+
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--android:id="@+id/circle_image"-->
+                    <!--android:layout_width="80dp"-->
+                    <!--android:layout_height="80dp"-->
+                    <!--android:src="@drawable/ic_action_circle" />-->
+                <TextView
+                    android:id="@+id/item_bill_account_initial"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="P"
+
+                    android:layout_centerVertical="true"
+                   android:gravity="center"
+                    android:textColor="@color/White_full"
+                    android:textAllCaps="true"
+                    android:textSize="20sp" />
+
+
+            <LinearLayout
+                android:id="@+id/mContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/item_bill_account_initial"
+
+                android:paddingLeft="20dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/item_bill_account_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="wea"
+                    android:textColor="@color/link"
+                    android:textSize="@dimen/feed_item_profile_name"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/item_bill_account_number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="wea"
+                    android:textColor="@color/timestamp"
+                    android:textSize="@dimen/feed_item_timestamp" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:id="@+id/item_bill_account_viewBtn"
+
+                    android:layout_gravity="right"
+                    android:text="View"
+                    android:textColor="@android:color/white"
+                    android:background="@color/bg_login"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
+<!--<?xml version= "1.0" encoding= "utf-8" ?>-->
+<!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/White_full"-->
+    <!--android:layout_margin="10dp"-->
+
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--tools:showIn="@layout/recycler_view_fragment">-->
+    <!--<TextView-->
+        <!--android:id = "@+id/item_bill_account_name"-->
+        <!--android:layout_width = "wrap_content"-->
+        <!--android:layout_height = "0dp"-->
+        <!--android:text = "View C"-->
+        <!--android:textSize="18sp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--app:layout_constraintLeft_toRightOf="@+id/barrier1"-->
+        <!--app:layout_constraintTop_toTopOf= "parent" />-->
+    <!--<TextView-->
+        <!--android:id = "@+id/item_bill_account_number"-->
+        <!--android:layout_width = "wrap_content"-->
+        <!--android:layout_height = "0dp"-->
+        <!--android:text = "View D"-->
+        <!--android:textSize="18sp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--app:layout_constraintTop_toBottomOf= "@+id/item_bill_account_name"-->
+        <!--app:layout_constraintLeft_toRightOf="@+id/barrier1" />-->
+    <!--<android.support.constraint.Barrier-->
+        <!--android:id = "@+id/barrier1"-->
+        <!--android:layout_width = "1dp"-->
+        <!--android:layout_height = "wrap_content"-->
+        <!--app:barrierDirection= "right"-->
+        <!--app:constraint_referenced_ids ="item_bill_account_initial"-->
+        <!--app:layout_constraintTop_toTopOf= "parent" />-->
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_marginTop ="16dp"-->
+        <!--android:gravity="center"-->
+        <!--android:id="@+id/circle_image"-->
+        <!--app:civ_border_width="2dp"-->
+        <!--app:layout_constraintStart_toStartOf ="parent"-->
+        <!--app:layout_constraintTop_toTopOf= "parent"-->
+        <!--app:layout_goneMarginBottom="16dp"/>-->
+    <!--<TextView-->
+        <!--android:id = "@+id/item_bill_account_initial"-->
+        <!--android:layout_width = "100dp"-->
+        <!--android:layout_height = "100dp"-->
+        <!--android:layout_marginTop ="16dp"-->
+        <!--android:layout_marginBottom="16dp"-->
+        <!--android:text = "P"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="36sp"-->
+        <!--android:textStyle="bold"-->
+        <!--app:layout_constraintStart_toStartOf ="parent"-->
+        <!--app:layout_constraintTop_toTopOf= "parent"-->
+        <!--app:layout_goneMarginBottom="16dp" />-->
+
+    <!--<android.support.constraint.Guideline-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:id="@+id/guideline"-->
+        <!--app:layout_constraintGuide_percent="0.75"/>-->
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:id="@+id/item_bill_account_viewBtn"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:text="View"-->
+        <!--tools:backgroundTint="@sample/material_colors"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:background="@color/bg_login"-->
+        <!--app:layout_constraintStart_toEndOf="@id/guideline"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_bill_account_number"-->
+        <!--app:layout_constraintLeft_toRightOf="@+id/barrier1"-->
+
+        <!--app:layout_goneMarginBottom="16dp"/>-->
+
+<!--</android.support.constraint.ConstraintLayout>-->
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/item_bill_account_initial"-->
+        <!--android:layout_width="102dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_marginLeft="12dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:background="@drawable/ic_circle"-->
+        <!--android:gravity="center"-->
+        <!--android:text="P"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="#ffffff"-->
+        <!--app:layout_constraintLeft_toRightOf="@+id/barrier1"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--tools:backgroundTint="@sample/material_colors" />-->
+    <!--<android.support.constraint.Barrier-->
+        <!--android:layout_width="1dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/barrier1"-->
+        <!--app:barrierDirection="right"-->
+        <!--app:constraint_referenced_ids="item_bill_account_name, item_bill_account_name"-->
+        <!--app:layout_constraintTop_toTopOf="parent"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/item_bill_account_name"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="128dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:text="WelcomeC"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/item_bill_account_number"-->
+        <!--app:layout_constraintLeft_toRightOf="@+id/barrier1"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:layout_goneMarginBottom="16dp" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/item_bill_account_number"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="200dp"-->
+        <!--android:layout_marginTop="28dp"-->
+        <!--android:text="WelcomeD"-->
+        <!--app:layout_constraintLeft_toRightOf="@+id/barrier1"-->
+
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_bill_account_name"-->
+        <!--app:layout_goneMarginBottom="16dp" />-->
+    <!--<android.support.constraint.Guideline-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:id="@+id/guideline"-->
+        <!--app:layout_constraintGuide_percent="0.75"/>-->
+    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+       <!--&lt;!&ndash;android:src="@mipmap/ic_launcher"/>&ndash;&gt;-->
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:id="@+id/item_bill_account_viewBtn"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:text="View"-->
+        <!--tools:backgroundTint="@sample/material_colors"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:background="@color/bg_login"-->
+        <!--app:layout_constraintStart_toEndOf="@id/guideline"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/item_bill_account_number"-->
+        <!--app:layout_constraintLeft_toRightOf="@+id/barrier1"-->
+
+        <!--app:layout_goneMarginBottom="16dp"/>-->
+
+    <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
+        <!--&lt;!&ndash;&ndash;&gt;-->
+    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+
+
+<!--</android.support.constraint.ConstraintLayout>-->

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.DescriptionActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/tambua_header"
+        android:background="@color/twitter_blue"
+
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tambua_back"
+            android:background="@color/twitter_blue"
+            android:src="@drawable/ic_action_back"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Tambua "
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:id="@+id/tambua_hd"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@+id/tambua_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:id="@+id/pre_image_cv"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+
+                android:layout_marginTop="120dp"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:layout_marginBottom="30dp"
+                android:text="@string/tambua"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width ="match_parent"
+                android:layout_height ="wrap_content" >
+                <EditText
+                    android:id ="@+id/pf_number_txt"
+                    android:layout_width ="match_parent"
+                    android:layout_height ="wrap_content"
+                    android:layout_marginBottom ="110dp"
+                    android:hint ="Enter the description of the problem"
+                    android:inputType ="numberDecimal"
+                    android:maxLines="1"
+                    android:textColor ="#00505f"
+                    android:textColorHint ="@android:color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <Button
+        android:id="@+id/tambua_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/submit"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/edit_profile_btn_blue"/>
+
+</RelativeLayout>

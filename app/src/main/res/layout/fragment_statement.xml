@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bill.StatementFragment">
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/rel_summary">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/summary_holder"
+                android:id="@+id/temp_rel">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:background="#0288d1"
+                    android:id="@+id/current_blc_tx"
+                    android:textColor="#f8f0d1"
+                    android:textSize="12sp"
+                    android:text="Bill Summary" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginHorizontal="1dp"
+                    android:id="@+id/fragment_last2"
+                    android:layout_below="@+id/current_blc_tx">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnPrint"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="230dp"
+                        android:visibility="gone"
+                        android:background="@drawable/circular_btn_bg"
+                        android:text="Print"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/amount_btn_holder"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:layout_below="@+id/fragment_last2">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/current_blc_tx"
+                        android:layout_marginTop="3dp"
+                        android:textAlignment="textStart"
+                        android:textColor="#333333"
+
+                        android:layout_weight="2"
+                        android:layout_marginLeft="16dp"
+                        android:textSize="12sp"
+                        android:text="Account" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text=""
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:id="@+id/summary_account_statement"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="16dp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bill_due_holder"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+
+                    android:layout_below="@+id/amount_btn_holder">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/current_blc_tx"
+                        android:layout_marginTop="3dp"
+                        android:textAlignment="textStart"
+                        android:textColor="#333333"
+                        android:layout_weight="2"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="Name" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/summary_month_bill"
+                        android:layout_weight="3"
+                        android:text=""
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="16dp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/fragment_bill_mth_bill"
+                    android:weightSum="5"
+
+                    android:layout_below="@+id/bill_due_holder">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/current_blc_tx"
+                        android:layout_marginTop="3dp"
+                        android:textAlignment="textStart"
+                        android:textColor="#333333"
+                        android:layout_weight="2"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="Meter Number" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:id="@+id/fragment_bill_outstanding"
+                        android:text=""
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="16dp"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:id="@+id/fragment_bill_out"
+                    android:background="#DE7DF538"
+                    android:weightSum="5"
+
+                    android:layout_below="@+id/fragment_bill_mth_bill">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/current_blc_tx"
+                        android:layout_marginTop="3dp"
+                        android:textAlignment="textStart"
+                        android:textColor="#333333"
+                        android:layout_weight="2.5"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="Outstanding Balance" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:id="@+id/fragment_outstanding"
+                        android:text=""
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="16dp"/>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/grey"
+                android:layout_marginBottom="10dp"
+                android:layout_marginHorizontal="5dp"
+                android:id="@+id/fragment_last"
+                android:weightSum="5"
+
+                android:layout_below="@+id/fragment_bill_out">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/current_blc_tx"
+                    android:layout_marginTop="3dp"
+                    android:textAlignment="textStart"
+                    android:textColor="#333333"
+                    android:layout_weight="2"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="16dp"
+                    android:text="Last Updated" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:id="@+id/fragment_last_updated"
+                    android:text=""
+                    android:textColor="#333333"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="16dp"/>
+
+
+            </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/fragment_bill_mth_"
+                android:weightSum="5"
+                android:layout_below="@+id/temp_rel">
+
+                <ScrollView android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content">
+
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content">
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmer_view_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        <TableLayout
+                            android:id="@+id/tablelayout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="25dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:stretchColumns="*"
+                            >
+
+                            <TableRow android:background="@drawable/table_border"  android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginBottom="2dp" android:layout_gravity="center_horizontal">
+                                <TextView android:id="@+id/tabletv1"  android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Bill No" android:textStyle="bold" android:layout_gravity="center_horizontal|center_vertical"/>
+                                <TextView android:id="@+id/tabletv2"  android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Period" android:textStyle="bold" android:layout_gravity="center_horizontal|center_vertical"/>
+                                <TextView android:id="@+id/tabletv3" android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Prev Rdgs" android:textStyle="bold" android:layout_gravity="center_horizontal|center_vertical"/>
+                                <TextView android:id="@+id/tabletv4"  android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Curr Rdgs" android:textStyle="bold" android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/tabletv5"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal|center_vertical"
+                                    android:text="Used"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView android:id="@+id/tabletv6"  android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Bill Type" android:textStyle="bold" android:layout_gravity="center_horizontal|center_vertical"/>
+                                <TextView android:id="@+id/tabletv7"  android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Bill Amount" android:textStyle="bold" android:layout_gravity="center_horizontal|center_vertical"/>
+                                <TextView android:id="@+id/tabletv71"  android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Payments" android:textStyle="bold" android:layout_gravity="center_horizontal|center_vertical"/>
+                                <TextView android:id="@+id/tabletv8"  android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Balance" android:textStyle="bold" android:layout_gravity="center_horizontal|center_vertical"/>
+
+                            </TableRow>
+                            <TableRow android:background="@drawable/table_border"  android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginBottom="2dp" android:layout_gravity="center_horizontal">
+                                <TextView android:id="@+id/tabletv11"  android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Current"  android:layout_gravity="center_horizontal|center_vertical"/>
+                                <TextView android:id="@+id/tabletv21"  android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Status"  android:layout_gravity="center_horizontal|center_vertical"/>
+                                <TextView android:id="@+id/tabletv31" android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="-"  android:layout_gravity="center_horizontal|center_vertical"/>
+                                <TextView android:id="@+id/tabletv41"  android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="-"  android:layout_gravity="center_horizontal|center_vertical"/>
+
+                                <TextView
+                                    android:id="@+id/tabletv51"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal|center_vertical"
+                                    android:text="-"
+                                    android:textSize="16sp" />
+                                <TextView android:id="@+id/tabletv61"  android:textSize="14sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="-"  android:layout_gravity="center_horizontal|center_vertical"/>
+                                <TextView android:id="@+id/tabletv72"  android:textSize="14sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="-"  android:layout_gravity="center_horizontal|center_vertical"/>
+                                <TextView android:id="@+id/tabletv711"  android:textSize="14sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="-"  android:layout_gravity="center_horizontal|center_vertical"/>
+                                <TextView android:id="@+id/tabletv81"  android:textSize="14sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="-"  android:layout_gravity="center_horizontal|center_vertical"/>
+
+                            </TableRow>
+
+                        </TableLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+                    </HorizontalScrollView>
+                </ScrollView>
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+</FrameLayout>

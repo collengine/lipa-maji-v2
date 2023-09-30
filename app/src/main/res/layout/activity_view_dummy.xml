@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <TableLayout
+            android:id="@+id/tablelayout1"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="45dp"
+            android:stretchColumns="*"
+            >
+
+            <TableRow android:background="@drawable/table_border"  android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginBottom="2dp" android:layout_gravity="center_horizontal">
+                <TextView android:id="@+id/tabletv1"  android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Bill No" android:textStyle="bold" android:layout_gravity="center_horizontal"/>
+                <TextView android:id="@+id/tabletv2"  android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Period" android:textStyle="bold" android:layout_gravity="center_horizontal"/>
+                <TextView android:id="@+id/tabletv3" android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Cons" android:textStyle="bold" android:layout_gravity="center_horizontal"/>
+                <TextView android:id="@+id/tabletv4"  android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Balance" android:textStyle="bold" android:layout_gravity="center_horizontal"/>
+                <TextView android:id="@+id/tabletv5" android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Cur-Reading" android:textStyle="bold" android:layout_gravity="center_horizontal"/>
+                <TextView android:id="@+id/tabletv6"  android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Reading  Date" android:textStyle="bold" android:layout_gravity="center_horizontal"/>
+                <TextView android:id="@+id/tabletv7"  android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Bill Amount" android:textStyle="bold" android:layout_gravity="center_horizontal"/>
+                <TextView android:id="@+id/tabletv8"  android:textSize="16sp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="Due Date" android:textStyle="bold" android:layout_gravity="center_horizontal"/>
+
+            </TableRow>
+
+        </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/home_bill_proceed_to_bill_btn"
+        android:layout_marginTop="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="30dp"
+        android:text="PROCEED TO BILL"
+        android:background="@drawable/edit_profile_btn_blue"
+        android:textColor="#FFEAEAEA"
+        android:textSize="@dimen/home_text"
+        />
+
+</RelativeLayout>

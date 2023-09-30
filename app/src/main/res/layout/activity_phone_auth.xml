@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White_full"
+    tools:context="com.water.eldowas.login.PhoneAuthActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:background="@color/twitter_blue"
+        android:text="Welcome to ELDOWAS Easy Check" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:background="#f7f3f3"
+        android:textAlignment="gravity"
+        android:textSize="15dp"
+        android:text="Phone Number used MUST be registered to an Account with ELDOWAS, either as Tenant/Landlord. \n\n You can also use alternative phone number, Submit SENT Code to Proceed" />
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/simcard_new"
+            android:id="@+id/sim_card"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:id="@+id/top_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sim_card"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="30dp"
+            android:weightSum="7">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="6">
+
+
+                <EditText
+                    android:id="@+id/login_user_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="#00505f" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/next_button"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/White_full"
+                android:src="@drawable/ic_action_check" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/top_linear"
+            android:text="06:00" />
+
+        <EditText
+            android:id="@+id/login_code"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="phone"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:hint="Enter Received Code"
+            android:visibility="gone"
+            android:textColor ="#00505f"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="50dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/login_code"
+            android:layout_height="40dp"
+            android:background="#0288d1"
+            android:text="Submit Code"
+            android:id="@+id/login_submit_btn"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"/>
+
+
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id ="@+id/progressBarFra"
+        android:layout_width = "50dp"
+        android:layout_height = "50dp"
+        android:layout_gravity="center"
+        android:indeterminate ="true"
+        android:visibility="gone"
+        android:progressDrawable ="@drawable/circular_progress_bar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background ="@drawable/circular_shape"
+        android:max ="100"
+        android:progress = "65" />
+
+
+</RelativeLayout>

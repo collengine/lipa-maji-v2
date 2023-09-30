@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.water.eldowas.ui.activity.AddAccountActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/twitter_blue"
+        android:id="@+id/toplayout"
+
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Add Water Account "
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:id="@+id/tambua_hd"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toplayout"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="left"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/edit_profile_bg"
+            android:background="@drawable/edit_profilr_btn"
+            android:padding="5dp"
+            android:text="Account Name"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/add_account_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="account name or Alias"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor ="#00505f" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/edit_profile_bg"
+            android:background="@drawable/edit_profilr_btn"
+            android:padding="5dp"
+            android:text="Account Number"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/add_account_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="4"
+                android:singleLine="true"
+                android:hint="3XXXXXX-00X"
+                android:inputType="textPostalAddress"
+                android:textColor ="#00505f" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+
+
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/add_account_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:backgroundTint="@color/common_google_signin_btn_tint"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="80px"
+            android:background="@drawable/edit_profilr_btn"
+            android:textAllCaps="false"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/edit_profile_bg"
+            android:textSize="15dp"
+
+            android:text="SAVE" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

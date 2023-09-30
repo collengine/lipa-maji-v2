@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bill.DownloadFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:id="@+id/rel_summary"
+
+        android:background="@drawable/summary_holder">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgn_view"
+            android:layout_width="377dp"
+            android:layout_height="250dp"
+
+            android:background="@drawable/eld_logo21" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:background="#0288d1"
+            android:id="@+id/current_download_text"
+            android:textColor="#f8f0d1"
+            android:textSize="20sp"
+            android:layout_marginTop="300dp"
+            android:text="Bill  Downloaded" />
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:id="@+id/download_progrez_bar"/>
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

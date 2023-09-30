@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_bill"
+        android:icon="@drawable/ic_action_billing"
+        android:title="Bill" />
+
+   <!-- <item
+        android:id="@+id/navigation_pay"
+        android:icon="@drawable/ic_action_pay"
+        android:title="Pay" />-->
+
+    <item
+        android:id="@+id/navigation_statement"
+        android:icon="@drawable/ic_action_statement"
+        android:title="Statement" />
+
+    <item
+        android:id="@+id/navigation_download"
+        android:icon="@drawable/ic_action_download"
+        android:title="Download" />
+
+</menu>

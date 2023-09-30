@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width ="fill_parent"
+    android:layout_height = "wrap_content"
+
+    android:layout_marginTop = "@dimen/feed_item_margin"
+    android:layout_marginRight="30dp"
+    android:layout_margin="5dp"
+    android:orientation = "vertical"
+    android:id="@+id/layout_main_container"
+    android:paddingBottom = "@dimen/feed_item_padding_top_bottom"
+    android:paddingTop = "@dimen/feed_item_padding_top_bottom" >
+
+    <!--<include layout="@layout/item_divider" />-->
+
+    <RelativeLayout
+        android:id="@+id/layout_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/bg_rounded"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/notification_eldowas_logo"
+            android:layout_width="30dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/ic_launcher_ico"
+            android:layout_marginLeft="15dp"
+            android:layout_height="30dp"/>
+
+        <RelativeLayout
+            android:id="@+id/mpicContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/notification_eldowas_logo"
+            android:layout_marginBottom="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+
+
+            <!--<de.hdodenhof.circleimageview.CircleImageView-->
+            <!--android:id="@+id/circle_image"-->
+            <!--android:layout_width="80dp"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:src="@drawable/ic_action_circle" />-->
+
+
+
+            <RelativeLayout
+                android:id="@+id/mContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/item_bill_account_initial"
+
+                android:paddingLeft="20dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/notification_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Water Rationing"
+                    android:textColor="@color/link"
+                    android:textSize="@dimen/feed_item_profile_name"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/notification_message"
+                    android:layout_width="fill_parent"
+                    android:layout_below="@+id/notification_title"
+                    android:layout_height="wrap_content"
+                    android:text="There will water rationing in kapsoya estate from 10am to 4pm "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/feed_item_timestamp" />
+
+                <TextView
+                    android:id="@+id/notification_time_stamp"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/notification_message"
+
+
+                    android:text="4 min Ago "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/feed_item_timestamp" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

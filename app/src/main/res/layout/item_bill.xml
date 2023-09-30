@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:background="#4545ea"
+    android:layout_height="wrap_content">
+
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:fillViewport="true"
+        android:measureAllChildren="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/bill_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="billing period"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/bill_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bill number"/>
+
+
+            <TextView
+                android:id="@+id/bill_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="previou reading"/>
+
+
+            <TextView
+                android:id="@+id/bill_current_reading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="current reading"/>
+
+
+            <TextView
+                android:id="@+id/bill_consumption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="consumption"/>
+
+
+            <TextView
+                android:id="@+id/bil_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+
+                android:text="bill type/actual/ estimate"/>
+
+
+            <TextView
+                android:id="@+id/bill_date_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="date read"/>
+
+
+            <TextView
+                android:id="@+id/bill_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bill amount"/>
+
+
+            <TextView
+                android:id="@+id/bill_total_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="total balance"/>
+
+
+            <TextView
+                android:id="@+id/bill_due_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="due date "/>
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+
+
+</LinearLayout>
+
+

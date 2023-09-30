@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.water.eldowas.bill.BillFragment">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:background="#ffffff"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:id="@+id/rel_summary"
+                    android:background="@drawable/summary_holder">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:background="#0288d1"
+                        android:id="@+id/current_blc_tx"
+                        android:textColor="#f8f0d1"
+                        android:textSize="20sp"
+                        android:text="Bill Summary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name_btn_holder"
+                        android:orientation="horizontal"
+                        android:weightSum="5"
+                        android:layout_below="@+id/current_blc_tx">
+                        <!--  <TextView
+                              android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@+id/current_blc_tx"
+                              android:layout_weight="1"
+                              android:text="Name"
+                              android:textColor="#333333"
+                              android:textSize="16sp"
+                              android:layout_marginTop="12dp"
+                              android:layout_marginLeft="20dp"
+                              android:layout_marginRight="16dp"/>-->
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:text=""
+                            android:textColor="#2ed455"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:id="@+id/summary_name"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="16dp"/>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/account_btn_holder"
+                        android:orientation="horizontal"
+                        android:weightSum="5"
+                        android:layout_below="@+id/name_btn_holder">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/current_blc_tx"
+                            android:layout_marginTop="12dp"
+                            android:textAlignment="textStart"
+                            android:textColor="#333333"
+                            android:layout_weight="3"
+                            android:layout_marginLeft="16dp"
+                            android:textSize="16sp"
+                            android:text="Account Number" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:id="@+id/summary_account"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="16dp"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/amount_btn_holder"
+                        android:orientation="horizontal"
+                        android:weightSum="5"
+                        android:layout_below="@+id/account_btn_holder">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/current_blc_tx"
+                            android:layout_marginTop="12dp"
+                            android:textAlignment="textStart"
+                            android:textColor="#333333"
+                            android:layout_weight="3"
+                            android:layout_marginLeft="16dp"
+                            android:textSize="16sp"
+                            android:text="Month" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:id="@+id/summary_month"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="16dp"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bill_due_holder"
+                        android:orientation="horizontal"
+                        android:weightSum="5"
+
+                        android:layout_below="@+id/amount_btn_holder">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/current_blc_tx"
+                            android:layout_marginTop="12dp"
+                            android:textAlignment="textStart"
+                            android:textColor="#333333"
+                            android:layout_weight="3"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="16dp"
+                            android:text="Current Bill" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/summary_month_bill"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginRight="16dp"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp"
+                        android:id="@+id/fragment_bill_mth_bill"
+                        android:weightSum="5"
+
+                        android:layout_below="@+id/bill_due_holder">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/current_blc_tx"
+                            android:layout_marginTop="12dp"
+                            android:textAlignment="textStart"
+                            android:textColor="#333333"
+                            android:layout_weight="3"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="16dp"
+                            android:text="Outstanding Amount" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:id="@+id/fragment_bill_outstanding"
+                            android:text=""
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginRight="16dp"/>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/main_layout"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/summary_holder"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/rel_summary"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="50dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+                        android:background="#0288d1"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Monthly Bill"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#f8f0d1"
+                            android:textSize="@dimen/home_text" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text="Period  "
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#0288d1"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/home_bill_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text=""
+                            android:textColor="@color/contact_name"
+                            android:textSize="@dimen/home_text" />
+                    </LinearLayout>
+
+                    <include layout="@layout/blue_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Bill Number "
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#0288d1"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/home_bill_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="10dp"
+                            android:text=""
+                            android:textColor="@color/contact_name"
+                            android:textSize="@dimen/home_text" />
+                    </RelativeLayout>
+
+                    <include layout="@layout/blue_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="current Meter Reading  "
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#0288d1"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/home_bill_cur_reading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text=""
+                            android:textColor="@color/contact_name"
+                            android:textSize="@dimen/home_text" />
+                    </RelativeLayout>
+
+                    <include layout="@layout/blue_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Previous Meter Reading  "
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#0288d1"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/home_bill_prev_reading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text=""
+                            android:textColor="@color/contact_name"
+                            android:textSize="@dimen/home_text" />
+                    </RelativeLayout>
+
+                    <include layout="@layout/blue_divider" />
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Consumption  "
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#0288d1"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/home_bill_monthly_units"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text=""
+                            android:textColor="@color/contact_name"
+                            android:textSize="@dimen/home_text" />
+                    </RelativeLayout>
+
+                    <include layout="@layout/blue_divider" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Water Bill  "
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#0288d1"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/home_bill_water_bill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text=""
+                            android:textColor="@color/contact_name"
+                            android:textSize="@dimen/home_text" />
+                    </RelativeLayout>
+
+                    <include layout="@layout/blue_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Sewerage Bill  "
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#0288d1"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/home_bill_sewerage_bill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text=""
+                            android:textColor="@color/contact_name"
+                            android:textSize="@dimen/home_text" />
+                    </RelativeLayout>
+
+                    <include layout="@layout/blue_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Meter Rent  "
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#0288d1"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/home_bill_standing_charges"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text=""
+                            android:textColor="@color/contact_name"
+                            android:textSize="@dimen/home_text" />
+                    </RelativeLayout>
+
+
+
+                    <include layout="@layout/blue_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Month Bill Amount  "
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#0288d1"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/home_bill_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text=""
+                            android:textColor="@color/contact_name"
+                            android:textSize="@dimen/home_text" />
+                    </RelativeLayout>
+
+                    <include layout="@layout/blue_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Date read "
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#0288d1"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/home_bill_date_read"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text=""
+                            android:textColor="@color/contact_name"
+                            android:textSize="@dimen/home_text" />
+                    </RelativeLayout>
+
+                    <include layout="@layout/blue_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="Due Date  "
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#0288d1"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/home_due_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text=""
+                            android:textColor="@color/contact_name"
+                            android:textSize="@dimen/home_text" />
+                    </RelativeLayout>
+
+                    <include layout="@layout/blue_divider" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="20dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:id="@+id/oustanding_balance_tv"
+                            android:text="Outstanding Balance  "
+                            android:textColor="#0288d1"
+                            android:textSize="@dimen/home_text"  />
+
+
+
+                        <TextView
+                            android:id="@+id/home_bill_final"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:paddingLeft="15dp"
+                            android:visibility="gone"
+                            android:paddingRight="15dp"
+                            android:background="@drawable/edit_profile_btn_green"
+                            android:text=""
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/home_text" />
+                    </RelativeLayout>
+
+                    <include layout="@layout/blue_divider" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:id="@+id/home_bill_date_updated"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_below="@+id/home_bill_final"
+
+
+                        android:text=" "
+                        android:layout_marginBottom="100dp"
+                        android:textColor="#121212"
+                        android:textSize="12sp"  />
+
+
+                </LinearLayout>
+
+
+                <!--starts here
+                -->
+
+
+                <!--the end
+        -->
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</FrameLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.water.eldowas.ui.activity.TambuaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/twitter_blue"
+        android:id="@+id/linyhll"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/about_back"
+            android:background="@color/twitter_blue"
+            android:src="@drawable/ic_action_back"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="About Application "
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:id="@+id/tambua_hd"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linyhll"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:id="@+id/pre_image_cv"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:border_color="#1A020C"
+                app:border_width="1dp"
+                android:id="@+id/post_verify_iconz"
+                android:layout_gravity="center"
+                android:src="@drawable/eld_logo21"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="80dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:id="@+id/post_verify_namem"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:text="Deloped by:"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:id="@+id/post_verify_positionf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="ELDOWAS ICT"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,138 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <androidx.drawerlayout.widget.DrawerLayout
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:app ="http://schemas.android.com/apk/res-auto"
+        xmlns:tools = "http://schemas.android.com/tools "
+        android:id ="@+id/drawer_layoutDra"
+        android:layout_width ="match_parent"
+        android:layout_height = "match_parent" >
+
+
+        <!-- AppBar Layout   -->
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width ="match_parent"
+            android:layout_height = "match_parent"
+            android:orientation = "vertical" >
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+                <!-- Tab Layout for creating tabs -->
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:tabIndicatorColor="@color/color_primary_red_dark" />
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <!-- Helps handing the Fragments for each Tab -->
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <fragment
+            android:id ="@+id/fragment_navigation_drawer"
+            android:name = "com.water.eldowas.ui.FragmentDrawer"
+            android:layout_width ="@dimen/nav_drawer_width"
+            android:layout_height = "match_parent"
+            android:layout_gravity ="start"
+            app:layout ="@layout/fragment_navigation_drawer"
+            tools:layout = "@layout/fragment_navigation_drawer" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+
+    <!--<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="fill_parent">-->
+    <!--<android.support.v4.widget.DrawerLayout-->
+        <!--xmlns:android = "http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:app ="http://schemas.android.com/apk/res-auto"-->
+        <!--xmlns:tools = "http://schemas.android.com/tools "-->
+        <!--android:id ="@+id/drawer_layoutDra"-->
+        <!--android:layout_width ="match_parent"-->
+        <!--android:layout_height = "match_parent" >-->
+
+        <!--&lt;!&ndash;<include layout="@layout/lat_content" />&ndash;&gt;-->
+        <!--<LinearLayout-->
+            <!--android:layout_width ="match_parent"-->
+            <!--android:layout_height = "match_parent"-->
+            <!--android:orientation = "vertical" >-->
+
+            <!--<LinearLayout-->
+                <!--android:id ="@+id/container_toolbar_three"-->
+                <!--android:layout_width ="match_parent"-->
+                <!--android:layout_height = "wrap_content"-->
+                <!--android:orientation = "vertical" >-->
+
+
+                <!--<android.support.design.widget.AppBarLayout-->
+                    <!--android:id="@+id/appBarLayout"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <!--<android.support.v7.widget.Toolbar-->
+                        <!--android:id="@+id/toolbar"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="?attr/actionBarSize"-->
+                        <!--android:background="?attr/colorPrimary"-->
+                        <!--app:layout_scrollFlags="scroll|enterAlways" />-->
+
+                    <!--<android.support.design.widget.TabLayout-->
+                        <!--android:id="@+id/tabLayout"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--app:tabTextColor="@android:color/holo_blue_dark"-->
+                        <!--app:tabSelectedTextColor="@android:color/holo_blue_light"-->
+                        <!--app:tabIndicatorColor="@color/twitter_blue"-->
+                        <!--app:tabIndicatorHeight="4dp"/>-->
+
+
+                <!--</android.support.design.widget.AppBarLayout>-->
+            <!--</LinearLayout>-->
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:id="@+id/notificationbar"-->
+                <!--android:layout_height="2dp"-->
+                <!--android:background="@color/cardview_dark_background"/>-->
+
+            <!--<android.support.v4.view.ViewPager-->
+                <!--android:id="@+id/viewPager"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_below="@+id/appBarLayout"-->
+                <!--app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
+
+
+        <!--</LinearLayout>-->
+
+
+        <!--<fragment-->
+            <!--android:id ="@+id/fragment_navigation_drawer"-->
+            <!--android:name = "waterapp.ui.FragmentDrawer"-->
+            <!--android:layout_width ="@dimen/nav_drawer_width"-->
+            <!--android:layout_height = "match_parent"-->
+            <!--android:layout_gravity ="start"-->
+            <!--app:layout ="@layout/fragment_navigation_drawer"-->
+            <!--tools:layout = "@layout/fragment_navigation_drawer" />-->
+
+    <!--</android.support.v4.widget.DrawerLayout>-->
+<!--</android.support.design.widget.CoordinatorLayout>-->
