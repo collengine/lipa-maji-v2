@@ -22,6 +22,8 @@ import android.content.Context;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 
+import com.google.firebase.FirebaseApp;
+
 import timber.log.Timber;
 
 /**
@@ -32,7 +34,7 @@ public class MyDuka extends MultiDexApplication {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         MultiDex.install(this);
-
+        FirebaseApp.initializeApp(this);
         if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
         }

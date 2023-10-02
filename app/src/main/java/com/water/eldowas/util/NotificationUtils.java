@@ -68,7 +68,7 @@ public class NotificationUtils {
     public static void createNotification(Context context, String content) {
         Notification noti = new Notification.Builder(context)
                 .setContentTitle(content)
-                .setContentText("Subject").setSmallIcon(R.mipmap.ic_launcher_ico).build();
+                .setContentText("Subject").setSmallIcon(R.mipmap.ic_launcher).build();
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
         // hide the notification after its selected
         noti.flags |= Notification.FLAG_AUTO_CANCEL;

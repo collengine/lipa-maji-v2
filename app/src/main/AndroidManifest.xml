@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.water.eldowas">
+    xmlns:tools="http://schemas.android.com/tools">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
@@ -20,9 +20,9 @@
     <application
         android:name="com.water.eldowas.MyDuka"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_ico"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_ico"
+        android:roundIcon="@mipmap/ic_launcher_ico_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
@@ -68,7 +68,8 @@
         <activity
             android:name="com.water.eldowas.ui.activity.MainActivity"
             android:label="@string/app_name" /> <!-- Firebase Notifications -->
-        <service android:name="com.water.eldowas.service.MyFirebaseMessagingService">
+        <service android:name="com.water.eldowas.service.MyFirebaseMessagingService"
+            android:exported="true">
             <intent-filter>
                 <action
                     android:name="com.google.firebase.MESSAGING_EVENT"
@@ -76,7 +77,8 @@
                     android:exported="true" />
             </intent-filter>
         </service>
-        <service android:name="com.water.eldowas.service.MyFirebaseInstanceIDService">
+        <service android:name="com.water.eldowas.service.MyFirebaseInstanceIDService"
+            android:exported="true">
             <intent-filter>
                 <action
                     android:name="com.google.firebase.INSTANCE_ID_EVENT"
@@ -88,7 +90,8 @@
             android:name="com.water.eldowas.ui.activity.NotificationActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.water.eldowas.login.LoginActivity">
+        <activity android:name="com.water.eldowas.login.LoginActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

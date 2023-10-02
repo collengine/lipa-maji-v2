@@ -15,7 +15,7 @@
         android:textSize="18dp"
         android:textStyle="bold"
         android:textAlignment="center"
-        android:background="@color/twitter_blue"
+        android:background="#ffffff"
         android:text="Welcome to ELDOWAS Easy Check" />
 
 
@@ -25,8 +25,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:padding="24px"
         android:layout_centerHorizontal="true"
-        android:background="#f7f3f3"
+        android:background="#ffffff"
         android:textAlignment="gravity"
         android:textSize="15dp"
         android:text="Phone Number used MUST be registered to an Account with ELDOWAS, either as Tenant/Landlord. \n\n You can also use alternative phone number, Submit SENT Code to Proceed" />
@@ -42,9 +43,10 @@
 
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/simcard_new"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:src="@drawable/sim_card"
+            android:rotation="270"
             android:id="@+id/sim_card"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"

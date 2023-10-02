@@ -40,7 +40,6 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.iid.FirebaseInstanceId;
 import com.water.eldowas.ListView_Fragment;
 import com.water.eldowas.R;
 import com.water.eldowas.RecyclerView_Fragment;
@@ -108,7 +107,8 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         mFirebaseAuth = FirebaseAuth.getInstance();
          mFirebaseUser = mFirebaseAuth.getCurrentUser();
 
-        token = FirebaseInstanceId.getInstance().getToken();
+        //token = FirebaseInstanceId.getInstance().getToken();
+        token = null;
 
 
 
